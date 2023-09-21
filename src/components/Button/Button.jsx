@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types'
+import css from "./Button.module.css"
 
 export const Button = ({ handleClickRender }) => (
-    <div>
+    <div className={css.btn}>
         <button type="button" onClick={handleClickRender}>
             Load more
         </button>

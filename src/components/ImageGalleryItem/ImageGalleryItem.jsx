@@ -1,13 +1,12 @@
-
 import PropTypes from 'prop-types'
-
+import css from "./ImageGalleryItem.module.css"
 export const ImageGalleryItem = ({id, smallUrl, tags, handleImageItemClick }) => (
     <li
         key={id}
         data-id={id}
         onClick={handleImageItemClick}
     >
-        <img src={smallUrl} alt={tags} data-id={id} />
+        <img className={css.small_img} src={smallUrl} alt={tags} data-id={id} />
     </li>
 );
 

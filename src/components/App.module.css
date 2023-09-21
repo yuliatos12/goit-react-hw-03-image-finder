@@ -17,8 +17,10 @@ ul {
     padding: 0;
     display: flex;
     flex-wrap: wrap;
+    gap: 20px;
 }
 .container {
-    width: 960px;
+    width: 1200px;
     margin: 0 auto;
 }
+

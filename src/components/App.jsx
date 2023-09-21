@@ -10,7 +10,7 @@ import css from "./App.module.css"
 
 
 export const paramsForNotify = {
-  position: 'center-center',
+  position: 'right',
   timeout: 3000,
   width: '400px',
   fontSize: '24px'
@@ -88,6 +88,7 @@ export class App extends Component {
     this.setState({ selectedPhoto });
 
     this.toggleModal();
+    console.log(selectedPhoto)
   }
 
   handleSubmitSearchBar = (event) => {
@@ -128,6 +129,7 @@ export class App extends Component {
         </div>
         {photos.length !== 0 && btnLoadMore && <Button handleClickRender={this.handleClickRender} />}
         {showModal && <Modal selectedPhoto={selectedPhoto} onClose={this.toggleModal} />}
+        
       </div>
     );
   }

@@ -14,11 +14,13 @@ export const ImageGallery = ({photos, handleImageItemClick}) => (
 );
 
 ImageGallery.propTypes = {
-    photos: PropTypes.arrayOf(PropTypes.objectOf({
-        id: PropTypes.number.isRequired,
-        largeImageURL: PropTypes.string.isRequired,
-        webformatURL: PropTypes.string.isRequired,
-        tags: PropTypes.string.isRequired,
-    }).isRequired,).isRequired,
-    handleImageItemClick: PropTypes.func.isRequired,
-}
+  photos: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      largeImageURL: PropTypes.string.isRequired,
+      webformatURL: PropTypes.string.isRequired,
+      tags: PropTypes.string.isRequired,
+    }).isRequired
+  ).isRequired,
+  handleImageItemClick: PropTypes.func.isRequired,
+};
